@@ -1,0 +1,139 @@
+.flatpickr-calendar {
+  border-radius: $border-radius;
+  border: 0;
+  box-shadow: $dropdown-box-shadow;
+  width: auto;
+  margin-top: -2px;
+  user-select: none;
+
+  &:before,
+  &:after {
+    display: none;
+  }
+
+  &.showTimeInput {
+    &.hasTime {
+      .flatpickr-time {
+        border-color: $gray-lighter;
+        height: 60px;
+      }
+    }
+  }
+}
+
+.flatpickr-month {
+  background-color: $teal;
+  color: $white;
+  height: 60px;
+  border-radius: $border-radius $border-radius 0 0;
+  margin-bottom: 10px;
+}
+
+.flatpickr-current-month {
+  top: 18px;
+  font-size: 1.3rem;
+  font-weight: $font-weight-bold;
+
+  span.cur-month,
+  input.cur-year {
+    font-weight: $font-weight-bold;
+  }
+
+  span.cur-month:hover {
+    background-color: transparent;
+  }
+
+  .numInputWrapper {
+    &:hover {
+      background-color: transparent;
+    }
+
+    span {
+      border: 0;
+      right: -5px;
+      padding: 0;
+
+      &:after {
+        left: 3px;
+      }
+
+      &.arrowUp:after {
+        border-bottom-color: $white;
+      }
+
+      &.arrowDown:after {
+        border-top-color: $white;
+      }
+    }
+  }
+}
+
+.flatpickr-prev-month,
+.flatpickr-next-month {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  top: 13px;
+  padding: 0;
+
+  &:hover {
+    background-color: rgba($white, 0.1);
+    color: $white;
+  }
+}
+
+.flatpickr-prev-month {
+  margin-left: 12px;
+}
+
+.flatpickr-next-month {
+  margin-right: 12px;
+}
+
+.flatpickr-innerContainer {
+  padding: 10px;
+}
+
+span.flatpickr-weekday {
+  font-weight: $font-weight-bold;
+  color: $headings-color;
+}
+
+.flatpickr-day {
+  font-size: 0.92rem;
+  border: 0;
+
+  &.selected {
+    &, &:hover {
+      background-color: $teal !important;
+    }
+  }
+
+  &.today {
+    &, &:hover {
+      background-color: $gray-lighter;
+      color: $headings-color;
+    }
+  }
+
+  &:hover {
+    background-color: $gray-lighter;
+  }
+}
+
+.flatpickr-time {
+  max-height: 60px;
+  height: 60px;
+  line-height: 60px;
+
+  .numInputWrapper,
+  .flatpickr-am-pm {
+    height: auto;
+
+    &:hover {
+      background-color: lighten($gray-lighter, 1%);
+    }
+  }
+}

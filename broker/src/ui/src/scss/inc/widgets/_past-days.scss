@@ -1,0 +1,27 @@
+.widget-past-days {
+  background-color: $teal;
+  overflow: hidden;
+}
+
+.widget-past-days__main {
+  margin: 0 -10px;
+}
+
+.widget-past-days__chart {
+  opacity: 0.75;
+  margin: 0.55rem 0 0 auto;
+
+}
+
+.widget-past-days__info {
+  small {
+    font-size: 1rem;
+    color: rgba($white, 0.9);
+  }
+
+  h3 {
+    margin: 0;
+    color: $white;
+    font-weight: normal;
+  }
+}

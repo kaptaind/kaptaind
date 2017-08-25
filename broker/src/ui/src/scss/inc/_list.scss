@@ -1,0 +1,23 @@
+.list {
+  list-style: none;
+  padding-left: 0;
+
+  & > li {
+    &:before {
+      font-family: $font-family-icon;
+      margin-right: 1.1rem;
+    }
+  }
+}
+
+.list--star > li:before {
+  content: '\f27d';
+}
+
+.list--check > li:before {
+  content: '\f26b';
+}
+
+.list--dot > li:before {
+  content: '\f26f';
+}

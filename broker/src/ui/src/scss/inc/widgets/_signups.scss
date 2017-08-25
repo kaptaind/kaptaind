@@ -1,0 +1,28 @@
+.widget-signups {
+  background-color: $blue-grey;
+
+  .card-header {
+    background-color: rgba($white, 0.08);
+  }
+}
+
+.widget-signups__list {
+  text-align: center;
+  padding: 2rem;
+
+  & > a {
+    vertical-align: top;
+    margin: 4px 2px;
+    display: inline-block;
+  }
+
+  .avatar-char {
+    background-color: rgba($white, 0.1);
+    color: $white;
+  }
+
+  .avatar-char,
+  .avatar-img {
+    margin: 0;
+  }
+}

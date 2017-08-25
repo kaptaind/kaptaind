@@ -1,0 +1,50 @@
+<br>
+<br>
+<br>
+<div class="content__inner">
+    <header class="content__title">
+        <h1>New Task</h1>
+    </header>
+
+    <div class="card">
+        <div class="card-block">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group form-group--select">
+                        <div class="select">
+                            <select [(ngModel)]="sourceClusterId" class="form-control">
+                                        <option>Source Cluster</option>
+                                        <option *ngFor="let cluster of clusters" [ngValue]="cluster.id">{{cluster.id}}</option>
+                                        </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form-group form-group--select">
+                        <div class="select">
+                            <select [(ngModel)]="targetClusterId" class="form-control">
+                                            <option>Target Cluster</option>
+                                            <option *ngFor="let cluster of clusters" [ngValue]="cluster.id">{{cluster.id}}</option>
+                                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                        <h3 class="card-block__title">Migrate Storage (Experimental)</h3>
+
+                        <br>
+
+                        <div class="form-group">
+                            <div class="toggle-switch">
+                                <input type="checkbox" class="toggle-switch__checkbox">
+                                <i class="toggle-switch__helper"></i>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <button [disabled]="!valid()" (click)="startExportTask()" class="btn btn-info btn-lg btn--icon-text waves-effect"><i class="zmdi zmdi-cloud"></i> Start</button>
+        </div>
+    </div>
+</div>

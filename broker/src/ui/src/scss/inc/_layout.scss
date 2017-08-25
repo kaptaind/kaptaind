@@ -1,0 +1,118 @@
+.main {
+  position: relative;
+}
+
+.main--alt {
+  padding-top: 40px;
+}
+
+.content {
+  &:not(.content--boxed):not(.content--full) {
+    @include media-breakpoint-up(xl) {
+      padding: ($header-height + $grid-gutter-width-base) $grid-gutter-width-base 0 $sidebar-width;
+    }
+
+    @include media-breakpoint-between(sm, lg) {
+      padding: ($header-height + $grid-gutter-width-base) $grid-gutter-width-base 0;
+    }
+
+    @include media-breakpoint-down(xs) {
+      padding: ($header-height + $grid-gutter-width-base/2) $grid-gutter-width-base/2 0;
+    }
+  }
+}
+
+.content--full {
+  @include media-breakpoint-up(sm) {
+    padding: ($header-height + $grid-gutter-width-base) $grid-gutter-width-base 0;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: ($header-height + $grid-gutter-width-base/2) $grid-gutter-width-base/2 0;
+  }
+}
+
+.content__inner {
+  margin: auto;
+
+  &:not(.content__inner--sm) {
+    max-width: 1280px;
+  }
+}
+
+.content__inner--sm {
+  max-width: 800px;
+}
+
+.content__title {
+  margin-bottom: 2rem;
+  padding: 1rem 2rem 0;
+  position: relative;
+
+  & > h1 {
+    line-height: 100%;
+    font-weight: normal;
+    font-size: 1.15rem;
+    margin: 0;
+    text-transform: uppercase;
+    color: $content-title-heading-color;
+  }
+
+  .actions {
+    position: absolute;
+    top: 0.3rem;
+    right: 1rem;
+  }
+
+  & > small {
+    font-size: 1rem;
+    display: block;
+    margin-top: 0.8rem;
+    color: lighten($content-title-heading-color, 18%);
+  }
+}
+
+// Dashboard columns (Salvattore)
+[data-columns] {
+  @include clearfix();
+
+  @media(min-width: 1500px) {
+    &:before {
+      content: '3 .column.size-1of3';
+    }
+  }
+
+  @media (min-width: 768px) {
+    margin: 0 -15px;
+
+    .column {
+      padding: 0 $grid-gutter-width-base/2;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1499px) {
+    &:before {
+      content: '2 .column.size-1of2';
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    margin: 0 -10px;
+
+    .column {
+      padding: 0 10px;
+    }
+
+    &:before {
+      content: '1 .column.size-1of1';
+    }
+  }
+}
+
+.column {
+  float: left;
+}
+
+.size-1of1 { width: 100%; }
+.size-1of2 { width: 50%; }
+.size-1of3 { width: 33.333%; }

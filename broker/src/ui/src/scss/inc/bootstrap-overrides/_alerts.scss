@@ -1,0 +1,84 @@
+.alert {
+  font-weight: 500;
+}
+
+[class*="alert-"] {
+  .alert-link {
+    color: $white;
+    border-bottom: 1px dotted rgba($white, 0.5);
+  }
+}
+
+.alert-heading {
+  font-weight: 500;
+  font-size: 1.3rem;
+  margin-top: 0.15rem;
+}
+
+.alert-dismissible {
+  .close {
+    & > span:not(.sr-only) {
+      background-color: rgba($white, 0.2);
+      line-height: 19px;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      font-size: 1.1rem;
+      display: block;
+    }
+
+    &:hover,
+    &:focus {
+      color: $white;
+
+      span:not(.sr-only) {
+        background-color: rgba($white, 0.3);
+      }
+    }
+  }
+}
+
+// Alert Inverse
+.alert-inverse {
+  @include alert-variant(#2c2c2c, #2c2c2c, $white);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+// Notify
+.alert--notify {
+  max-width: 600px;
+  width: 100%;
+  padding-right: 60px;
+
+  &:not(.alert-inverse) {
+    .alert--notify__close {
+      color: $white;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &.alert-inverse {
+    .alert--notify__close {
+      color: $yellow;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.alert--notify__close {
+  background-color: transparent;
+  border: 0;
+  text-transform: uppercase;
+  padding: 0;
+  cursor: pointer;
+  font-weight: $font-weight-bold;
+  position: absolute;
+  right: $alert-padding-x;
+  top: $alert-padding-y;
+}

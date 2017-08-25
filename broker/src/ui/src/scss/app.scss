@@ -1,0 +1,92 @@
+// Variables
+@import "inc/variables";
+
+
+// Mixins
+@import "inc/mixins";
+
+
+// Bootstrap
+@import "inc/bootstrap-imports/bootstrap-imports";
+
+
+// Bootstrap overrides
+@import "inc/bootstrap-overrides/dropdown";
+@import "inc/bootstrap-overrides/media";
+@import "inc/bootstrap-overrides/progress";
+@import "inc/bootstrap-overrides/card";
+@import "inc/bootstrap-overrides/buttons";
+@import "inc/bootstrap-overrides/tables";
+@import "inc/bootstrap-overrides/forms";
+@import "inc/bootstrap-overrides/input-groups";
+@import "inc/bootstrap-overrides/custom-forms";
+@import "inc/bootstrap-overrides/pagination";
+@import "inc/bootstrap-overrides/alerts";
+@import "inc/bootstrap-overrides/close";
+@import "inc/bootstrap-overrides/breadcrumbs";
+@import "inc/bootstrap-overrides/accordion";
+@import "inc/bootstrap-overrides/carousel";
+@import "inc/bootstrap-overrides/modal";
+@import "inc/bootstrap-overrides/popovers";
+@import "inc/bootstrap-overrides/tabs";
+@import "inc/bootstrap-overrides/tooltip";
+
+
+// Core styles
+@import "inc/fonts";
+@import "inc/generics";
+@import "inc/base";
+@import "inc/list";
+@import "inc/layout";
+@import "inc/misc";
+@import "inc/header";
+@import "inc/footer";
+@import "inc/sidebar";
+@import "inc/chat";
+@import "inc/charts";
+@import "inc/toggle-switch";
+@import "inc/listview";
+@import "inc/page-loader";
+@import "inc/profile";
+@import "inc/photos";
+@import "inc/contacts";
+@import "inc/groups";
+@import "inc/messages";
+@import "inc/pricing-table";
+@import "inc/invoice";
+@import "inc/login";
+@import "inc/todo";
+@import "inc/notes";
+@import "inc/theme";
+@import "inc/ie-warning";
+@import "inc/error";
+
+
+// Widgets
+@import "inc/widgets/past-days";
+@import "inc/widgets/visitors";
+@import "inc/widgets/pie-charts";
+@import "inc/widgets/quick-stats";
+@import "inc/widgets/photos";
+@import "inc/widgets/ratings";
+@import "inc/widgets/profile";
+@import "inc/widgets/contact";
+@import "inc/widgets/signups";
+
+
+// Vendor overrides
+@import "inc/vendor-overrides/flot";
+@import "inc/vendor-overrides/sparklines";
+@import "inc/vendor-overrides/select2";
+@import "inc/vendor-overrides/dropzone";
+@import "inc/vendor-overrides/nouislider";
+@import "inc/vendor-overrides/easy-pie-charts";
+@import "inc/vendor-overrides/data-tables";
+@import "inc/vendor-overrides/flatpickr";
+@import "inc/vendor-overrides/bootstrap-colorpicker";
+@import "inc/vendor-overrides/trumbowyg";
+@import "inc/vendor-overrides/fullcalendar";
+@import "inc/vendor-overrides/sweetalert2";
+@import "inc/vendor-overrides/lightgallery";
+@import "inc/vendor-overrides/jquery.scrollbar";
+@import "inc/vendor-overrides/Waves";

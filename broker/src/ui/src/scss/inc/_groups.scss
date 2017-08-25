@@ -1,0 +1,61 @@
+.groups {
+  @include media-breakpoint-down(xs) {
+    margin: 0 -5px;
+
+    [class*=col-] {
+      padding: 0 5px;
+    }
+
+    .groups__item {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.groups__item {
+  position: relative;
+  text-align: center;
+  padding: 2rem 1rem 1.5rem;
+  margin-bottom: $grid-gutter-width-base;
+  @include card();
+
+  &:hover {
+    .actions {
+      opacity: 1;
+    }
+  }
+
+  .actions {
+    position: absolute;
+    top: 0.7rem;
+    right: 0.5rem;
+    z-index: 1;
+    opacity: 0;
+  }
+}
+
+.groups__img {
+  width: 6.2rem;
+  display: inline-block;
+
+  .avatar-img {
+    display: inline-block;
+    margin: 0 -1px 3px 0;
+    vertical-align: top;
+  }
+}
+
+.groups__info {
+  margin-top: 1rem;
+
+  & > strong {
+    color: $headings-color;
+    display: block;
+    font-weight: $font-weight-bold;
+  }
+
+  & > small {
+    font-size: 0.9rem;
+    color: $text-muted;
+  }
+}

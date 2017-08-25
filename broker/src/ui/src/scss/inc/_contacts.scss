@@ -1,0 +1,77 @@
+.contacts {
+  @include media-breakpoint-down(xs) {
+    margin: 0 -5px;
+
+    & > [class*="col-"] {
+      padding: 0 5px;
+    }
+  }
+}
+
+.contacts__item {
+  background-color: $white;
+  border-radius: $border-radius;
+  box-shadow: $card-shadow;
+  padding: 1.8rem 1.5rem 1.15rem;
+  text-align: center;
+  margin-bottom: $grid-gutter-width-base;
+
+  &:hover {
+    .contacts__img > img {
+      transform: scale(1.1);
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    margin-bottom: 10px;
+  }
+}
+
+.contacts__img {
+  display: block;
+  margin-bottom: 1.1rem;
+
+  & > img {
+    max-width: 120px;
+    max-height: 120px;
+    width: 100%;
+    border-radius: 50%;
+    @include transition(transform 300ms);
+  }
+}
+
+.contacts__info {
+  strong,
+  small {
+    @include text-overflow();
+    display: block;
+  }
+
+  strong {
+    font-weight: $font-weight-bold;
+  }
+
+  small {
+    font-size: 0.9rem;
+    color: $text-muted;
+  }
+}
+
+.contacts__btn {
+  margin-top: 10px;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  border: 0;
+  line-height: 100%;
+  background-color: transparent;
+  color: $body-color;
+  cursor: pointer;
+  padding: 8px 10px;
+  border-radius: $border-radius;
+  @include transition(background-color 300ms, color 300ms);
+
+  &:hover {
+    background-color: $gray-lighter;
+    color: $headings-color;
+  }
+}

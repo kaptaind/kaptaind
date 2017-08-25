@@ -1,0 +1,72 @@
+.waves-effect {
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
+  .waves-ripple {
+    position: absolute;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+    transition-property: transform, opacity;
+    transform: scale(0) translate(0, 0);
+    pointer-events: none;
+  }
+
+  &:not(.waves-light),
+  &.btn-secondary,
+  &.btn-link {
+    .waves-ripple {
+      background: rgba($black, 0.08);
+    }
+  }
+
+
+  &.btn:not(.btn-secondary):not(.btn-link),
+  &.waves-light {
+    .waves-ripple {
+      background: rgba($white, 0.5);
+    }
+  }
+
+  &.waves-classic {
+    .waves-ripple {
+      background: rgba($black, 0.08);
+    }
+
+    &.waves-light {
+      .waves-ripple {
+        background: rgba($white, 0.5);
+      }
+    }
+  }
+}
+
+
+.waves-notransition {
+  transition: none !important;
+}
+.waves-button,
+.waves-circle {
+  transform: translateZ(0);
+  -webkit-mask-image: -webkit-radial-gradient(circle, $white 100%, $black 100%);
+}
+
+.waves-input-wrapper {
+  .waves-button-input {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border: 0;
+  }
+}
+
+.waves-block {
+  display: block;
+}

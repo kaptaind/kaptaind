@@ -1,0 +1,41 @@
+.swal2-modal {
+  border-radius: $border-radius;
+  padding: 2.5rem !important;
+  font-family: $font-family-base;
+  box-shadow: $dropdown-box-shadow;
+
+  .swal2-title {
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 1;
+    color: $headings-color;
+    line-height: inherit;
+    margin: 0 0 5px;
+    font-weight: normal;
+  }
+
+  .swal2-icon,
+  .swal2-image {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .swal2-content {
+    color: $text-muted;
+    font-size: 1rem;
+    font-weight: normal;
+  }
+
+  .swal2-buttonswrapper {
+    margin-top: 30px;
+
+    .btn {
+      margin: 0 3px;
+      box-shadow: none !important;
+    }
+  }
+}
+
+.swal2-container.in {
+  background-color: rgba($black, 0.2);
+}

@@ -1,0 +1,93 @@
+$toggle-switch-rail-bg: #e0e0e0;
+
+.toggle-switch {
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+  position: relative;
+}
+
+.toggle-switch__helper {
+  position: absolute;
+  height: 12px;
+  width: 100%;
+
+  &:before,
+  &:after {
+    will-change: left, background-color;
+    content: '';
+    position: absolute;
+    left: 0;
+    @include transition(left 200ms, background-color, 200ms);
+  }
+
+  &:before {
+    background-color: $toggle-switch-rail-bg;
+    top: 4px;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  &:after {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $white;
+    left: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,.2);
+    z-index: 1;
+  }
+}
+
+.toggle-switch__checkbox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
+  cursor: pointer;
+
+  &:checked {
+    & ~ .toggle-switch__helper{
+      &:after {
+        left: calc(100% - 20px);
+        background-color: $teal;
+      }
+    }
+  }
+
+  &:disabled {
+    & ~ .toggle-switch__helper {
+      opacity: 0.65;
+    }
+  }
+
+  &:active {
+    & ~ .toggle-switch__helper:after {
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+  }
+}
+
+// Theming
+@mixin toggle-switch-theme($color) {
+  .toggle-switch__checkbox {
+    &:checked {
+      & ~ .toggle-switch__helper{
+        &:after {
+          background-color: $color;
+        }
+      }
+    }
+  }
+}
+
+.toggle-switch--red { @include toggle-switch-theme($red); }
+.toggle-switch--blue { @include toggle-switch-theme($light-blue); }
+.toggle-switch--green { @include toggle-switch-theme($green); }
+.toggle-switch--amber { @include toggle-switch-theme($amber); }
+.toggle-switch--purple { @include toggle-switch-theme($purple); }
+.toggle-switch--cyan { @include toggle-switch-theme($cyan); }

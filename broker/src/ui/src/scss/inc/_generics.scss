@@ -1,0 +1,38 @@
+// Generate background color and color classes
+$colors-list: (
+        'red' $red,
+        'pink' $pink,
+        'purple' $purple,
+        'deep-purple' $deep-purple,
+        'indigo' $indigo,
+        'blue' $blue,
+        'light-blue' $light-blue,
+        'cyan' $cyan,
+        'teal' $teal,
+        'green' $green,
+        'light-green' $light-green,
+        'lime' $lime,
+        'yellow' $yellow,
+        'amber' $amber,
+        'orange' $orange,
+        'deep-orange' $deep-orange,
+        'brown' $brown,
+        'grey' $grey,
+        'blue-grey' $blue-grey,
+        'black' $black,
+        'white' $white);
+
+@each $current-color in $colors-list {
+  .bg-#{nth($current-color, 1)} {
+    background-color: #{nth($current-color, 2)} !important;
+  }
+
+  .color-#{nth($current-color, 1)} {
+    color: #{nth($current-color, 2)} !important;
+  }
+}
+
+// Overflow
+.o-hidden { overflow: hidden; }
+.o-visible { overflow: visible; }
+.o-auto { overflow: auto; }

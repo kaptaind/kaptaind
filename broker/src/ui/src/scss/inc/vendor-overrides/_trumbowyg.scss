@@ -1,0 +1,89 @@
+.trumbowyg-box, 
+.trumbowyg-editor {
+  border-color: $input-border-color;
+  margin: 0;
+}
+
+.trumbowyg-button-pane {
+  background-color: $white;
+  border-color: $input-border-color;
+
+  &:after {
+    background-color: $input-border-color;
+  }
+
+  .trumbowyg-button-group {
+    &:not(:empty) {
+      & + .trumbowyg-button-group {
+        &:before {
+          background-color: $input-border-color;
+        }
+      }
+    }
+  }
+}
+
+.trumbowyg-dropdown {
+  border: 0;
+  box-shadow: $dropdown-box-shadow;
+
+  button {
+    font-size: 1rem;
+    height: 40px;
+    padding: 0 $dropdown-item-padding-x;
+
+    svg {
+      margin-top: -3px;
+    }
+
+    &:hover {
+      background-color: $dropdown-link-hover-bg;
+    }
+  }
+}
+
+.trumbowyg-modal-box {
+  font-size: 1rem;
+  box-shadow: $dropdown-box-shadow;
+
+  .trumbowyg-modal-title {
+    font-size: 1.2rem;
+    color: $headings-color;
+    background-color: $white;
+    font-weight: $font-weight-bold;
+    border: 0;
+  }
+  
+  label {
+    margin: 15px 20px;
+    font-weight: normal;
+
+    .trumbowyg-input-infos {
+      span {
+        color: $headings-color;
+        border-color: $input-border-color;
+      }
+    }
+
+    input {
+      border-color: $input-border-color;
+      font-size: 1rem;
+      color: $input-color;
+
+      &:focus,
+      &:hover {
+        border-color: darken($input-border-color, 5%);
+      }
+    }
+  }
+
+  .trumbowyg-modal-button {
+    font-size: 1rem;
+    height: auto;
+    line-height: 100%;
+    border-radius: $border-radius;
+    padding: 7px 0;
+    margin: 0 20px;
+    bottom: 18px;
+  }
+}

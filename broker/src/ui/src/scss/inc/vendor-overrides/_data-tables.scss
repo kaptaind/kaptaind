@@ -1,0 +1,212 @@
+.dataTables_wrapper {
+  margin-top: 20px;
+
+  .table {
+    margin: 40px 0 20px;
+  }
+}
+
+.dataTables_length,
+.dataTables_filter {
+  font-size: 0;
+  position: relative;
+
+  &:after {
+    font-family: $font-family-icon;
+    position: absolute;
+    left: 0;
+    bottom: 6px;
+    font-size: 1.3rem;
+    color: $headings-color;
+  }
+
+  & > label {
+    margin: 0;
+    width: 100%;
+
+    select,
+    input[type=search] {
+      padding-left: 25px;
+      font-size: $font-size-base;
+      background: none;
+      border: 0;
+      height: 35px;
+      border-radius: 0;
+      width: 100%;
+      border-bottom: 1px solid $input-border-color;
+    }
+  }
+}
+
+.dataTables_length {
+  float: right;
+  @include select-bg();
+  margin-left: 20px;
+
+  @include media-breakpoint-up(sm) {
+    min-width: 150px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    display: none;
+  }
+
+  &:after {
+    content: '\f197';
+  }
+
+  select {
+    appearance: none;
+  }
+}
+
+.dataTables_filter {
+  overflow: hidden;
+
+  &:after {
+    content: '\f1c3';
+  }
+
+  & > label {
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 0;
+      bottom: 0;
+      @include transition(all 200ms);
+      transition-timing-function: ease;
+      background-color: $light-blue;
+    }
+
+    &:before {
+      left: 50%;
+    }
+
+    &:after {
+      right: 50%;
+    }
+  }
+}
+
+.dataTables_filter--toggled {
+  & > label {
+    &:before,
+    &:after {
+      width: 50%;
+    }
+  }
+}
+
+.dataTables_paginate {
+  text-align: center;
+}
+
+.paginate_button {
+  background-color: $pagination-bg;
+  display: inline-block;
+  color: $pagination-color;
+  vertical-align: top;
+  border-radius: 50%;
+  margin: 0 1px 0 2px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+
+  &.current {
+    background-color: $pagination-active-bg;
+    color: $white;
+    cursor: default;
+  }
+
+  &:not(.current):not(.disabled) {
+    &:hover,
+    &:focus {
+      background-color: $pagination-hover-bg;
+      color: darken($body-color, 10%);
+    }
+  }
+  
+  &.current,
+  &.disabled {
+    cursor: default;
+  }
+
+  &.previous,
+  &.next {
+    font-size: 0;
+    position: relative;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      font-size: 1rem;
+    }
+
+    &:before {
+      font-family: $font-family-icon;
+      font-size: 1rem;
+      line-height: 2.55rem;
+    }
+  }
+
+  &.previous {
+    &:before {
+      content: '\F2FF';
+    }
+  }
+
+  &.next {
+    &:before {
+      content: '\F301';
+    }
+  }
+
+  &.disabled {
+    opacity: 0.6;
+    
+    &:hover,
+    &:focus {
+      color: $pagination-color;
+    }
+  }
+}
+
+.dataTables_info {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 0.9rem;
+  color: $text-muted;
+}
+
+.dataTables_buttons {
+  float: right;
+  margin: 10px 0 0 30px;
+
+  .actions__item {
+    color: $body-color !important;
+
+    &:hover {
+      color: $black !important;
+
+    }
+  }
+}
+
+.dt-buttons {
+  display: none;
+}
+
+.data-table-toggled {
+  overflow: hidden;
+
+  .dataTables_buttons {
+    [data-table-action="fullscreen"] {
+      &:before {
+        content: '\f16c';
+      }
+    }
+  }
+}

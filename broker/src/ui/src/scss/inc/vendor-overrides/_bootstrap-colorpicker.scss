@@ -1,0 +1,60 @@
+.colorpicker {
+  padding: 5px;
+
+  &:before,
+  &:after {
+    display: none;
+  }
+
+  div {
+    border-radius: $border-radius;
+  }
+
+  &.colorpicker-horizontal {
+    width: 160px;
+
+    .colorpicker-hue,
+    .colorpicker-alpha,
+    .colorpicker-color {
+      width: 100%;
+    }
+  }
+}
+
+.colorpicker-saturation {
+  width: 150px;
+  height: 150px;
+
+  i {
+    border: 0;
+    box-shadow: 0 0 5px rgba($black, 0.36);
+
+    &, b {
+      height: 10px;
+      width: 10px;
+    }
+  }
+}
+
+.colorpicker-hue,
+.colorpicker-alpha {
+  width: 20px;
+  height: 150px;
+}
+
+.colorpicker-color {
+  &, div {
+    height: 20px;
+  }
+}
+
+.color-picker__preview {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}

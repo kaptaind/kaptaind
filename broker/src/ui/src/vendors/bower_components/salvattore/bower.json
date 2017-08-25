@@ -1,0 +1,40 @@
+{
+  "name": "salvattore",
+  "homepage": "http://salvattore.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rnmp/salvattore"
+  },
+  "description": "A jQuery Masonry alternative with CSS-driven configuration",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Rolando Murillo",
+      "email": "rolando@bandd.co",
+      "homepage": "http://rolandomurillo.com/"
+    },
+    {
+      "name": "Giorgio Leveroni",
+      "email": "giorgio.m.leveroni@gmail.com"
+    }
+  ],
+  "main": "dist/salvattore.js",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "keywords": [
+    "grid",
+    "layout",
+    "browser",
+    "masonry"
+  ]
+}

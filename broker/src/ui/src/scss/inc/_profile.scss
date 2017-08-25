@@ -1,0 +1,54 @@
+.profile {
+  @include media-breakpoint-up(md) {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 75px;
+    text-align: center;
+  }
+}
+
+.profile__img {
+  padding: 5px;
+  position: relative;
+
+  img {
+    max-width: 200px;
+    border-radius: $border-radius;
+  }
+
+  @include media-breakpoint-down(sm){
+    img {
+      margin: -55px 0 -10px;
+      width: 120px;
+      border: 5px solid $white;
+      border-radius: 50%;
+    }
+  }
+}
+
+.profile__img__edit {
+  position: absolute;
+  font-size: 1.2rem;
+  top: 15px;
+  left: 15px;
+  background-color: rgba($black,0.4);
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  color: $white;
+
+  &:hover {
+    background-color: rgba($black,0.65);
+    color: $white;
+  }
+}
+
+.profile__info {
+   padding: 30px;
+}

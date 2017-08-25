@@ -1,0 +1,60 @@
+.dropdown,
+.dropup {
+  position: relative;
+}
+
+.dropdown-item {
+  padding: 0.5rem $dropdown-item-padding-x;
+  cursor: pointer;
+  @include transition(background-color 300ms, color 300ms);
+}
+
+.dropdown-menu {
+  top: 0;
+  @include animate(fadeIn, 300ms);
+}
+
+.dropdown-menu--alt {
+  padding: 0;
+}
+
+.dropdown-menu--block {
+  width: 320px;
+
+  @include media-breakpoint-down(xs) {
+    width: 100%;
+  }
+}
+
+.dropdown-menu--icon {
+  .dropdown-item {
+    & > i {
+      line-height: 100%;
+      vertical-align: top;
+      font-size: 1.4rem;
+      width: 2rem;
+    }
+  }
+}
+
+.dropup {
+  .dropdown-menu {
+    bottom: 0;
+  }
+}
+
+.caret {
+  &:before {
+    font-family: $font-family-icon;
+    content: '\f2f2';
+    font-size: 1.5rem;
+    font-style: normal;
+    line-height: 5px;
+    position: relative;
+    top: 3px;
+  }
+}
+
+.dropdown-toggle-split {
+  border-radius: 0 $border-radius $border-radius !important;
+}

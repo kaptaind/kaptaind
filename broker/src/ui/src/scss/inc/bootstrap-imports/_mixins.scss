@@ -1,0 +1,56 @@
+// Toggles
+//
+// Used in conjunction with global variables to enable certain theme features.
+
+@mixin box-shadow($shadow...) {
+  @if $enable-shadows {
+    box-shadow: $shadow;
+  }
+}
+
+@mixin transition($transition...) {
+  @if $enable-transitions {
+    @if length($transition) == 0 {
+      transition: $transition-base;
+    } @else {
+      transition: $transition;
+    }
+  }
+}
+
+// Utilities
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/breakpoints";
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/hover";
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/image";
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/badge";
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/resize";
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/screen-reader";
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/size";
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/reset-text";
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/text-emphasis";
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/text-hide";
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/text-truncate";
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/transforms";
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/visibility";
+
+// Components
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/alert";
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/cards";
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/pagination";
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/lists";
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/list-group";
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/nav-divider";
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/forms";
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/table-row";
+
+// Skins
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/background-variant";
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/border-radius";
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/gradients";
+
+// Layout
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/clearfix";
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/navbar-align";
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/grid-framework";
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/grid";
+@import "../../../vendors/bower_components/bootstrap/scss/mixins/float";

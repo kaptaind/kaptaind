@@ -1,0 +1,17 @@
+.photos {
+  margin: 0 0 1rem;
+
+  @include media-breakpoint-down(xs) {
+    margin: 0 (-$card-spacer-x)+0.2rem 1rem;
+  }
+
+  & > a {
+    padding: 0;
+    border: 2px solid $white;
+
+    img {
+      border-radius: $border-radius;
+      width: 100%;
+    }
+  }
+}

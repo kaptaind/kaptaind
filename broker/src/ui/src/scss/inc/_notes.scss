@@ -1,0 +1,102 @@
+//Listing
+.notes__item {
+  margin-bottom: $grid-gutter-width-base;
+
+  & > a {
+    height: 155px;
+    background-color: $white;
+    display: block;
+    padding: 1.8rem 2rem;
+    position: relative;
+    color: $body-color;
+    @include transition(background-color 300ms);
+
+    &,
+    &:before {
+      border-radius: $border-radius;
+      box-shadow: 0 1px 1px rgba($black,0.08);
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: calc(100% - 10px);
+      bottom: -5px;
+      left: 5px;
+      z-index: -1;
+      height: 20px;
+      background-color: $white;
+
+      @include transition(bottom 200ms);
+    }
+  }
+
+  &:hover {
+    & > a {
+      &:before {
+        bottom: -8px;
+      }
+    }
+
+    .notes__actions {
+      opacity: 1;
+    }
+  }
+}
+
+.notes__title {
+  color: $headings-color;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  @include text-overflow();
+}
+
+.notes__actions {
+  position: absolute;
+  right: 2.2rem;
+  bottom: 1rem;
+  font-size: 1.1rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  text-align: center;
+  background: rgba($black,0.7);
+  border-radius: 50%;
+  line-height: 2.2rem;
+  color: $white;
+  box-shadow: 0 0 4px rgba($black,0.5);
+  opacity: 0;
+  @include transition(opacity 300ms);
+  cursor: pointer;
+
+  &:hover {
+    background: rgba($black,0.9);
+  }
+}
+
+
+//New Note Modal
+.note-view {
+  .trumbowyg-box {
+    border: 0;
+  }
+}
+
+.note-view__field {
+  border-bottom: 1px solid $input-border-color;
+
+  input {
+    border: 0;
+    font-size: 1rem;
+    padding: 1.7rem 2rem;
+    height: auto;
+  }
+}
+
+.note-view__field--color {
+  padding: 1.2rem 2rem 0.8rem;
+}
+
+.note-view__label {
+  float: left;
+  margin: 0.4rem 1.5rem 0 0;
+}

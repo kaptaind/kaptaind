@@ -1,0 +1,93 @@
+.invoice {
+  min-width: 1100px;
+  max-width: 1170px;
+  border-radius: 2px;
+  padding: 2.5rem;
+  @include card();
+}
+
+.invoice__header {
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: $border-radius $border-radius 0 0;
+  margin-bottom: 1.5rem;
+}
+
+.invoice__address {
+  margin-bottom: 4rem;
+
+  h4 {
+    font-weight: normal;
+    margin-bottom: 1rem;
+  }
+}
+
+.invoice__attrs {
+  margin-bottom: 2.5rem;
+
+  [class*="col-"] {
+    padding: -10px;
+  }
+}
+
+.invoice__attrs__item {
+  padding: 1.5rem 2rem;
+  border-radius: $border-radius;
+  text-align: center;
+  background-color: $gray-lighter;
+
+  small {
+    margin-bottom: 0.2rem;
+    display: block;
+    font-size: 1rem;
+  }
+
+  h3 {
+    margin: 0;
+    line-height: 100%;
+    font-weight: normal;
+  }
+}
+
+.invoice__table {
+  margin-bottom: 4rem;
+}
+
+.invoice__footer {
+  text-align: center;
+  margin: 4rem 0 1.5rem;
+
+  & > a {
+    color: $body-color;
+  }
+}
+
+@media print {
+  @page {
+    margin: 0;
+    size: auto;
+  }
+
+  body {
+    margin: 0mm 0mm 0mm 0mm !important;
+    padding: 0mm !important;
+  }
+
+  .header,
+  .actions,
+  .content__title,
+  .footer,
+  .notifications,
+  .navigation,
+  .chat,
+  .growl-animated,
+  .btn--action {
+    display: none !important;
+  }
+
+  // Invoice
+  .invoice {
+    padding: 30px !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+}

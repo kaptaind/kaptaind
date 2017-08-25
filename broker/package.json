@@ -1,0 +1,24 @@
+{
+  "name": "kaptaind_broker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/body-parser": "^1.16.4",
+    "@types/express": "^4.0.36",
+    "@types/socket.io": "^1.4.29",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "socket.io": "^2.0.3",
+    "@kubernetes/typescript-node": "^0.1.1",
+    "@types/request": "^2.0.0",
+    "base-64": "^0.1.0",
+    "bluebird": "^3.5.0",
+    "js-yaml": "^3.9.1"
+  }
+}

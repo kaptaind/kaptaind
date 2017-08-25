@@ -1,0 +1,19 @@
+{
+  "name": "kaptaind_agent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@kubernetes/typescript-node": "^0.1.1",
+    "@types/request": "^2.0.0",
+    "base-64": "^0.1.0",
+    "bluebird": "^3.5.0",
+    "js-yaml": "^3.9.1",
+    "request": "^2.81.0"
+  }
+}

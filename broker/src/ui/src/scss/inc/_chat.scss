@@ -1,0 +1,89 @@
+.chat {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: $sidebar-width + 50px;
+  height: 100%;
+  background-color: $white;
+  z-index: $header-z-index + 1;
+  box-shadow: -5px 0 10px rgba($black, 0.08);
+  padding-top: $grid-gutter-width-base;
+  @include transition(transform 300ms, opacity 300ms);
+
+  &:not(.toggled) {
+    transform: translate3d(($sidebar-width + 70px), 0, 0);
+    opacity: 0;
+  }
+
+  &.toggled {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.chat__header {
+  padding: 0 2rem;
+}
+
+.chat__title {
+  line-height: 100%;
+  margin: 0 0 2rem;
+  font-size: 1.2rem;
+
+  & > small {
+    color: $text-muted;
+    font-size: 0.95rem;
+    display: block;
+    margin-top: 0.5rem;
+    text-transform: none;
+  }
+}
+
+.chat__search {
+  .form-group {
+    &:before {
+      @include font-icon('\f1c3', 1.4rem);
+      position: absolute;
+      left: 0;
+      bottom: 0.3rem;
+    }
+  }
+
+  .form-control {
+    padding-left: 2rem;
+  }
+}
+
+.chat__buddies {
+  height: 100%;
+  overflow-y: auto;
+
+  .listview__item {
+    padding-left: 3rem;
+  }
+}
+
+// Status
+.chat__available,
+.chat__away,
+.chat__busy {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    content: '';
+    border-radius: 50%;
+    left: 1.5rem;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+
+.chat__available:before { background-color: $green }
+.chat__away:before { background-color: $amber }
+.chat__busy:before { background-color: $red }
+
+

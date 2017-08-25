@@ -1,0 +1,25 @@
+$accordion-shade: #f7f7f7;
+
+.accordion {
+  .card {
+    box-shadow: none;
+    margin: 0 0 1px;
+  }
+
+  .card-header {
+    padding: 0.9rem 0;
+    box-shadow: 0 1px 0 0 $accordion-shade;
+    @include transition(box-shadow 300ms);
+  }
+
+  .card-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: $headings-color;
+    display: block;
+  }
+
+  .card-block {
+    padding: 1.5rem 0;
+  }
+}

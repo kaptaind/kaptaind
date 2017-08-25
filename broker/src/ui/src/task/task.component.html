@@ -1,0 +1,54 @@
+<div *ngIf="!taskLoaded" class="text-center">
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="item">
+        <div class="spinner1"></div>
+        <h4>Loading<span class="dot">.</span></h4>
+    </div>
+</div>
+
+<div *ngIf="taskLoaded" class="card">
+    <div class="card-header">
+        <h2 class="card-title">Task Details</h2>
+    </div>
+
+    <div class="card-block">
+        <button (click)="deleteTask()" class="btn btn-danger btn-lg btn--icon-text waves-effect"><i class="zmdi zmdi-delete"></i>Delete Task</button>
+        <br>
+        <br>
+        <table class="table table-inverse mb-0">
+            <thead>
+                <tr>
+                    <th>Status</th>
+                    <th>Source Cluster</th>
+                    <th>Target Cluster</th>
+                    <th>Duration</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td [ngClass]="{ 'green': (task.status == 'InProgress'), 'red': (task.status == 'Error') }">{{task.status}}</td>
+                    <td>{{task.sourceClusterId}}</td>
+                    <td>{{task.targetClusterId}}</td>
+                    <td>{{taskDuration}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div *ngIf="taskLoaded" class="card">
+    <div class="card-header">
+        <h2 class="card-title">Logs</h2>
+    </div>
+
+    <div class="card-block">
+        <div *ngFor="let log of task.logs.reverse()">
+            <h4>{{log.description}}</h4>
+            <h5>{{getLogTime(log.createdAt)}}</h5>
+            <br>
+        </div>
+    </div>
+</div>

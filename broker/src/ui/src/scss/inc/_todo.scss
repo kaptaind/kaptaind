@@ -1,0 +1,54 @@
+.todo__item {
+  padding-left: 4.5rem;
+  display: block;
+
+  small {
+    display: block;
+    font-size: 0.95rem;
+    margin-top: 0.2rem;
+  }
+
+  .custom-control-input {
+    &:checked {
+      & ~ .todo__info {
+        text-decoration: line-through;
+      }
+
+      & ~ .custom-control--char__helper {
+        & > i {
+          background-color: #e9e9e9 !important;
+        }
+
+        &:after {
+          color: #5E5E5E;
+        }
+      }
+    }
+  }
+}
+
+.todo__info {
+  & > span {
+    color: $headings-color;
+  }
+
+  & > small {
+    color: $text-muted;
+  }
+}
+
+.todo__labels {
+  & > a {
+    color: $amber;
+    border: 2px solid lighten($amber, 20%);
+    border-radius: $border-radius;
+    padding: 0.35rem 0.8rem;
+    display: inline-block;
+    margin: 0 0.1rem 0.4rem;
+    @include transition(color 300ms, border-color 300ms);
+
+    &:hover {
+      color: darken($amber, 5%);
+    }
+  }
+}

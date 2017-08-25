@@ -1,0 +1,91 @@
+.white-background {
+    background-color: white;
+}
+
+.red {
+    color: #ff5652
+}
+
+.green {
+    color: #32c787
+}
+
+.selectable {
+    cursor: pointer;
+}
+
+select {
+    font-size: 30px;
+    border: 1px solid lightblue;
+    border-radius: 10px;
+    color: black;
+    padding: 12px;
+    width: 300px;
+    -webkit-appearance: none;
+
+    background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50px' height='50px'><polyline points='46.139,15.518 25.166,36.49 4.193,15.519'/></svg>") right no-repeat;
+    background-transparency: 0.5;
+    background-position: right 15px top 22px;
+    background-size: 18px 18px;
+}
+select:active {
+    border: 1px solid #000;
+}
+#zozo {
+    margin: 0px;
+}
+
+.btn-huge {
+    width: 200px !important;
+    height: 50px !important;
+    font-size: 25px !important;
+}
+
+.spinner1 {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: solid 50px;
+    border-radius: 5em;
+    border-color: #0099ff transparent #0099ff transparent;
+    animation: spin 1s linear infinite;
+  }
+  
+  .spinner2 {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: solid 50px;
+    border-radius: 5em;
+    border-color: transparent transparent #0099ff transparent;
+    animation: spin 1s linear infinite;
+  }
+  
+  .dot:before, .dot:after {
+    content: ".";
+  }
+  .dot {
+    animation: fade 1s linear infinite;
+  }
+  .dot:after {
+    animation: fade 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

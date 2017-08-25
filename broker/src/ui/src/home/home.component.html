@@ -1,0 +1,111 @@
+<header class="content__title">
+    <h1><strong>Dashboard</strong></h1>
+</header>
+
+<div class="row quick-stats">
+    <div class="col-sm-6 col-md-3">
+        <div class="quick-stats__item bg-blue">
+            <div class="quick-stats__info">
+                <h2>{{info.totalClusters}}</h2>
+                <small>Total Clusters</small>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-sm-6 col-md-3">
+        <div class="quick-stats__item bg-amber">
+            <div class="quick-stats__info">
+                <h2>{{info.tasksInProgress}}</h2>
+                <small>Tasks In Progress</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3">
+        <div class="quick-stats__item bg-green">
+            <div class="quick-stats__info">
+                <h2>{{info.tasksCompleted}}</h2>
+                <small>Tasks Completed</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3">
+        <div class="quick-stats__item bg-red">
+            <div class="quick-stats__info">
+                <h2>{{info.tasksFailed}}</h2>
+                <small>Tasks Failed</small>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<button routerLink="/newtask" class="btn btn-success btn-lg btn--icon-text waves-effect"><i class="zmdi zmdi-plus"></i> New Task</button>
+<br>
+<br>
+<div class="row">
+    <div class="col-md-7 col-xs-12 col-lg-7">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Clusters</h2>
+            </div>
+            
+            <div class="card-block">
+                <table class="table table-inverse mb-0">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Version</th>
+                            <th># of Nodes</th>
+                            <th># of Deployments</th>
+                            <th># of Pods</th>
+                            <th># of Services</th>
+                            <th># of Config Maps</th>
+                            <th># of Controllers</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let cluster of clusters">
+                            <td>{{cluster.id}}</td>
+                            <td>{{cluster.kubeletVersion}}</td>
+                            <td>{{cluster.nodeCount}}</td>
+                            <td>{{cluster.depsCount}}</td>
+                            <td>{{cluster.podCount}}</td>
+                            <td>{{cluster.svcCount}}</td>
+                            <td>{{cluster.configMapsCount}}</td>
+                            <td>{{cluster.rsCount + cluster.rcCount}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-5 col-xs-12 col-lg-5">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Tasks</h2>
+            </div>
+
+            <div class="card-block">
+                <table class="table table-inverse mb-0">
+                    <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Source Cluster</th>
+                            <th>Target Cluster</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let task of tasks">
+                            <td [ngClass]="{ 'green': (task.status == 'InProgress'), 'red': (task.status == 'Error') }" class="selectable"><a (click)="openTask(task.id)">{{task.status}}</a></td>
+                            <td>{{task.sourceClusterId}}</td>
+                            <td>{{task.targetClusterId}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

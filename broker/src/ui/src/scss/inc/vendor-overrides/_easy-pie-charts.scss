@@ -1,0 +1,24 @@
+.easy-pie-chart {
+  display: inline-block;
+  position: relative;
+}
+
+.easy-pie-chart__value {
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+
+  &:after {
+    content: "%";
+    font-size: 12px;
+  }
+}
+
+.easy-pie-chart__title {
+  margin-top: -2px;
+  line-height: 15px;
+  font-size: 11px;
+}

@@ -1,0 +1,85 @@
+<main class="main">
+  <div class="page-loader">
+    <div class="page-loader__spinner">
+      <svg viewBox="25 25 50 50">
+        <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+      </svg>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="navigation-trigger hidden-xl-up" data-ma-action="aside-open" data-ma-target=".sidebar">
+      <div class="navigation-trigger__inner">
+        <i class="navigation-trigger__line"></i>
+        <i class="navigation-trigger__line"></i>
+        <i class="navigation-trigger__line"></i>
+      </div>
+    </div>
+    
+    <div class="header__logo hidden-sm-down">
+      <h1><a href="javascript:;">Kaptaind</a></h1>
+    </div>
+
+    <form class="search">
+      <div class="search__inner">
+        <input type="text" class="search__text" placeholder="Search for clusters, tasks, etc...">
+        <i class="zmdi zmdi-search search__helper" data-ma-action="search-close"></i>
+      </div>
+    </form>
+
+    <ul class="top-nav">
+      <li class="hidden-xl-up"><a href="" data-ma-action="search-open"><i class="zmdi zmdi-search"></i></a></li>
+
+      <li class="dropdown top-nav__notifications">
+        <a href="" data-toggle="dropdown" class="top-nav__notify">
+                            <i class="zmdi zmdi-notifications"></i>
+                        </a>
+        <div class="dropdown-menu dropdown-menu-right dropdown-menu--block">
+          <div class="listview listview--hover">
+            <div class="listview__header">
+              Notifications
+
+              <div class="actions">
+                <a href="" class="actions__item zmdi zmdi-check-all" data-ma-action="notifications-clear"></a>
+              </div>
+            </div>
+
+            <div class="listview__scroll scrollbar-inner">
+
+            </div>
+
+            <div class="p-1"></div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </header>
+
+  <aside class="sidebar">
+    <div class="scrollbar-inner">
+      <div class="user">
+        <div class="user__info" data-toggle="dropdown">
+          <img class="user__img" src="/img/user.jpg" alt="">
+          <div>
+            <div class="user__name">Welcome, Admin</div>
+          </div>
+        </div>
+
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="">Logout</a>
+        </div>
+      </div>
+
+      <ul class="navigation">
+        <li class="navigation__active"><a routerLink="/home"><i class="zmdi zmdi-home"></i> Home</a></li>
+        <li><a href="javascript:;"><i class="zmdi zmdi-info"></i> Docs</a></li>
+        <li><a href="javascript:;"><i class="zmdi zmdi-chart"></i> Reports (Coming Soon)</a></li>
+        <li><a href="javascript:;"><i class="zmdi zmdi-lock"></i> RBAC (Coming Soon)</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <section class="content">
+    <router-outlet></router-outlet>
+  </section>
+</main>

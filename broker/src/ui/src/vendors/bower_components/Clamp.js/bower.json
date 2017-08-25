@@ -1,0 +1,23 @@
+{
+  "name": "Clamp.js",
+  "main": "clamp.js",
+  "version": "0.5.2",
+  "homepage": "https://github.com/PedroFelipe/Clamp.js",
+  "authors": [
+    "Joseph J. Schmitt <me@joe.sh>",
+    "Pedro Felipe <pedro@pedrofelipe.com.br>"
+  ],
+  "keywords": [
+    "text-overflow",
+    "clamp",
+    "ellipsis"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
