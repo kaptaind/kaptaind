@@ -21,7 +21,7 @@ The state of this project is alpha and is very much experimental.
 kaptaind is made out of two components: a Broker and an Agent.
 
 The Broker is responsible for storing cluster state, task management and log management.
-It exposes a RESTful API and can be accessed via a Web UI and the kaptaind CLI.
+It exposes a RESTful API and can be accessed via a Web UI and the kaptaind [CLI].
 The broker can be hosted anywhere and must be accessible to any cluster that wants to join.
 
 The agent runs on the Kubernetes clusters and periodically reports the cluster state and gets any waiting import tasks.
@@ -81,3 +81,5 @@ Make sure you have the correct env variables in place.
 tsc
 node build/server.js
 ```
+
+[CLI]: https://github.com/kaptaind/cli
