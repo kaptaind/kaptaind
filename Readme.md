@@ -37,7 +37,7 @@ Build the Broker and Agent with docker build, or use a stable image from Docker 
 docker run -d -p 80:3000 kaptaind/broker
 ```
 
-To access the kaptaind UI, go to http://<ip-address> in your browser.
+To access the kaptaind UI, go to http://{ip-address} in your browser.
 
 ### run the broker on Kubernetes
 ```
@@ -50,7 +50,7 @@ Expose the deployment and wait until you get an external IP:
 kubectl expose deployment broker-deployment --type=LoadBalancer --target-port=3000
 ```
 
-Once you get the external IP, go to http://<external-ip> to access the kaptaind UI
+Once you get the external IP, go to http://{External-IP} to access the kaptaind UI
 
 ### run the agent
 The kaptaind agent has 3 environment variables:
