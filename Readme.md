@@ -68,18 +68,18 @@ kubectl create -f ./templates/agent.yaml
 In a few seconds the cluster should appear in the kaptaind UI.
 
 ## Development
-## Broker
+### Broker
 ```
-sudo ./build.sh
-node build/server.js
+$ sudo ./build.sh
+$ node build/server.js
 ```
 
-## Agent
+### Agent
 Make sure you have the correct env variables in place.
 
 ```
-tsc
-node build/server.js
+$ tsc
+$ node build/server.js
 ```
 
 [CLI]: https://github.com/kaptaind/cli
