@@ -1,4 +1,4 @@
-# Kaptaind
+# Kaptaind: Sync, Backup, Restore
 
 [![youtubevid](https://github.com/kaptaind/kaptaind/raw/master/images/videothumbnail.png)](https://www.youtube.com/watch?v=O1IYk8CN-l8)
 
