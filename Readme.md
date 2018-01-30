@@ -1,4 +1,7 @@
 # Kaptaind
+
+[![youtubevid](https://github.com/kaptaind/kaptaind/raw/master/images/videothumbnail.png)](https://www.youtube.com/watch?v=O1IYk8CN-l8)
+
 kaptaind is a resource sync, backup and restore tool for Kubernetes.<br />
 
 kaptaind can sync Kubernetes resources between clusters and across different cloud providers and on-premise installations.
